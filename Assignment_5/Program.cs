@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace Assignment_5
+namespace Assignment_5_part2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //DECLARATIONS
+//DECLARATIONS
             int teamOne;
             int scoreOne;
             int teamTwo;
@@ -20,12 +20,15 @@ namespace Assignment_5
             primer = houseKeeping();
 
             while(primer != EXIT){
+
                 for(var i = 0; i < teams.Length; i++){
 
                     //Define 1st team
                     System.Console.WriteLine($"Please enter your first team number:");
                     System.Console.WriteLine("The number must be 1 - 12");
-                    System.Console.WriteLine($"{teams[i]}");
+                    for(var x = 0; x < teams.Length; x++){
+                        System.Console.WriteLine($"{teams[x]}");
+                        }
                     teamOne = Convert.ToInt32(Console.ReadLine());
 
 
@@ -58,35 +61,36 @@ namespace Assignment_5
                     System.Console.WriteLine($"Please enter the score of {teams[teamTwo]}");
                     scoreTwo = Convert.ToInt32(Console.ReadLine());
                     scores[i].scoreTwo = scoreTwo;
+                    
 
+                    System.Console.WriteLine($"{teams[teamOne]}: {scoreOne} vs. {teams[teamTwo]}: {scoreTwo}");
+          
+                decision(teamOne, teamTwo, scoreOne, scoreTwo);
+                primer = rerun();
+                }
 
-                    System.Console.WriteLine($"{teams[teamOne]}: {scoreOne} vs. {teamTwo}: {scores[scoreTwo]}");
-                    if(scoreOne > scoreTwo){
-                        System.Console.WriteLine($"{teams[teamOne]} wins!");
-                    }else if (scoreTwo > scoreOne){
-                        System.Console.WriteLine($"{teams[teamTwo]} wins!");
-                    }else{
-                        System.Console.WriteLine($"{teams[teamOne]} tied {teams[teamTwo]}");
-                    }
+            }
+        }
 
-                    primer = rerun();
-
-                
-                }// for loop
-
-
-            }// while loop
-
-
-
-        }// end main
-
-        static string houseKeeping(){
+    static string houseKeeping(){
         string primer;
         System.Console.WriteLine("Welcome to the WNBA site. Please type 'ENTER' to enter");
         primer = Console.ReadLine();
 
         return primer;
+    }
+    static string decision(int teamOne, int teamTwo, int scoreOne, int scoreTwo){
+        string [] teams = {"1. Atlanta_Dream", "2. Chicago_Sky", "3. Connecticut_Sun", "4. Indiana_Fever", "5. New_York_Liberty", "6. Washington_Mystics", "7. Dallas_Wings", "8. Las_Vegas_Aces", "9. Los_Angeles_Sparks", "10. Minnesota_Lynx", "11. Phoenix_Mercury", "12. Seattle_Storm"};
+        string winner;
+        if(scoreOne > scoreTwo){
+                    winner = String.Format($"{teams[teamOne]} wins!");
+                    }else if (scoreTwo > scoreOne){
+                    winner = String.Format($"{teams[teamTwo]} wins!");
+                    }else{
+                    winner = String.Format($"{teams[teamOne]} tied {teams[teamTwo]}");
+                    }
+                return winner;
+
     }
     static string rerun(){
         string primer;
@@ -96,7 +100,7 @@ namespace Assignment_5
         return primer;
     }
 
-    }//end class program
+    }
 
 
 
@@ -108,3 +112,7 @@ namespace Assignment_5
         public int scoreTwo{get; set;}
     }
 }
+
+        
+    
+

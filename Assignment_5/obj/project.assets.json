@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\egnnica\\Desktop\\Assignment_5\\Assignment_5.csproj",
-      "projectName": "Assignment_5",
-      "projectPath": "C:\\Users\\egnnica\\Desktop\\Assignment_5\\Assignment_5.csproj",
+      "projectUniqueName": "C:\\Users\\egnnica\\Desktop\\Assignment_5_part2\\Assignment_5_part2.csproj",
+      "projectName": "Assignment_5_part2",
+      "projectPath": "C:\\Users\\egnnica\\Desktop\\Assignment_5_part2\\Assignment_5_part2.csproj",
       "packagesPath": "C:\\Users\\egnnica\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\egnnica\\Desktop\\Assignment_5\\obj\\",
+      "outputPath": "C:\\Users\\egnnica\\Desktop\\Assignment_5_part2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
